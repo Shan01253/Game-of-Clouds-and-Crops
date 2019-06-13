@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerActions : MonoBehaviour
 {
     public Sprite normalSprite;       // sprite to display normally
     public Sprite panicSprite;        // sprite to display when shift is pressed
-    public int waitTime;
+    public float waitTime;
     private SpriteRenderer sr;       // wanna sprite cranberry
     public bool displayAnim;
+
+    private static event Action<int> onSpritzListeners;
+
+    public static void subscribe_Spritz(Action<int> func)
+    {
+        onSpritzListeners += func;
+    }
+    public static void unsubscribe_Spritz(Action<int> func)
+    {
+        onSpritzListeners += func;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +37,15 @@ public class PlayerActions : MonoBehaviour
        if (Input.GetButtonUp("Fire1")) {
            Debug.Log("testing");
            StartCoroutine(panicTemp());
+            onSpritzListeners?.Invoke(3);
        }
     }
 
     IEnumerator panicTemp() {
         sr.sprite = panicSprite;
+        sr.sortingLayerName = "front";
         yield return new WaitForSeconds(waitTime);
+        sr.sortingLayerName = "Default";
         sr.sprite = normalSprite;
     }
 }
