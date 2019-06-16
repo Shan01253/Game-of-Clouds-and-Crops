@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UniRx;
-using System;
+using Rewired;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -11,20 +10,25 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D body;
     public float speed = 5;
 
+    private Player player;
+
+    private void Awake()
+    {
+        player = ReInput.players.GetPlayer(0);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-
     }
 
     void Update()
     {
         // default zero velocity if no inputs
-        Vector2 velocity = Vector2.zero;
+        Vector2 velocity = player.GetAxis2D("Move Horizontal", "Move Vertical");
 
-
+        /*
         // add vectors depending on key pressed
         if (Input.GetKey(KeyCode.W))
         {
@@ -42,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity += Vector2.left;
         }
+        */
 
         float angle = Vector2.SignedAngle(Vector2.right, velocity);
 
