@@ -28,30 +28,20 @@ public class PlayerMovement : MonoBehaviour
         // default zero velocity if no inputs
         Vector2 velocity = player.GetAxis2D("Move Horizontal", "Move Vertical");
 
-        /*
-        // add vectors depending on key pressed
-        if (Input.GetKey(KeyCode.W))
-        {
-            velocity += Vector2.up;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            velocity += Vector2.down;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            velocity += Vector2.right;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            velocity += Vector2.left;
-        }
-        */
-
         float angle = Vector2.SignedAngle(Vector2.right, velocity);
 
+        // lock movement angle to 8 directions
+        angle = Mathf.Round(angle / 45) * 45;
+
         if (velocity.sqrMagnitude > 0)
+        {
+            // velocity is adjusted for 8-direction movement only if sqrMagnitude > 0
+            // because cos(0) = 1, making the player move right with no input
+            float rad = angle * Mathf.Deg2Rad;
+            velocity = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+
             transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+        }
         // make velocity go in correct direction at correct speed
         body.velocity = speed * velocity.normalized;
     }
