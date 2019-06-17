@@ -10,11 +10,12 @@ public class RaindropThrower : MonoBehaviour
     public float maxSpeed = 10;
     float radius;
     float π = Mathf.PI;
+
+    public GameObject ignoreCollisionsWith;
     // Start is called before the first frame update
     void Start()
     {
         radius = referenceCircleRadius;
-
         StartCoroutine(RandomThrow_WithDelay());
     }
 
@@ -29,6 +30,7 @@ public class RaindropThrower : MonoBehaviour
 
         GameObject obj = ObjectPooler.SpawnFromPool("raindrop", withStartingPoint, withNoRotation);
         obj.GetComponent<Rigidbody2D>().velocity = trajectory * maxSpeed * Random.Range(0.3f, 1);
+        Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), ignoreCollisionsWith.GetComponent<EdgeCollider2D>());
 
         StartCoroutine(RandomThrow_WithDelay());
     }
