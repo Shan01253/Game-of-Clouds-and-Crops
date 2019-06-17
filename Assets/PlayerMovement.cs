@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D body;
     public float speed = 5;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +49,4 @@ public class PlayerMovement : MonoBehaviour
         // make velocity go in correct direction at correct speed
         body.velocity = speed * velocity.normalized;
     }
-
 }
