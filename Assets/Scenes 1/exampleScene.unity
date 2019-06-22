@@ -123,12 +123,12 @@ GameObject:
   - component: {fileID: 1239538}
   - component: {fileID: 1239537}
   m_Layer: 0
-  m_Name: bluecrudefarmhouse
+  m_Name: crudeBlueFarmhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1239537
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -184,12 +184,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1970148880}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193957428
 GameObject:
@@ -546,12 +546,12 @@ GameObject:
   - component: {fileID: 353150927}
   - component: {fileID: 353150926}
   m_Layer: 0
-  m_Name: cruderedfarm
+  m_Name: crudeRedCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &353150926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,11 +608,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353150925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.02, y: 4, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 5, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358649239
 GameObject:
@@ -625,12 +625,12 @@ GameObject:
   - component: {fileID: 358649241}
   - component: {fileID: 358649240}
   m_Layer: 0
-  m_Name: crudefarm
+  m_Name: crudePurpleCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &358649240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -687,8 +687,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358649239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.97, y: 4.01, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: -5, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
   m_RootOrder: 2
@@ -1066,12 +1066,12 @@ GameObject:
   - component: {fileID: 603872012}
   - component: {fileID: 603872013}
   m_Layer: 0
-  m_Name: crudefarm (4)
+  m_Name: crudePurpleCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &603872012
 Transform:
   m_ObjectHideFlags: 0
@@ -1080,11 +1080,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603872011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9699998, y: 5, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: -4, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &603872013
 SpriteRenderer:
@@ -1145,12 +1145,12 @@ GameObject:
   - component: {fileID: 873025168}
   - component: {fileID: 873025167}
   m_Layer: 0
-  m_Name: redcrudefarmhouse
+  m_Name: crudeRedFarmhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &873025167
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1206,12 +1206,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873025166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9927397, y: 5.0046844, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1970148880}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053882010
 GameObject:
@@ -1292,6 +1292,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1134058047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1134058049}
+  - component: {fileID: 1134058048}
+  m_Layer: 0
+  m_Name: PlayerColorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1134058048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134058047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee772df5b57a422ba63d51b7c3a1222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoAssignColorsToPlayers: 1
+  purpleColorField: {r: 0.73333335, g: 0.36078432, b: 0.972549, a: 1}
+  redColorField: {r: 1, g: 0.68235296, b: 0.68235296, a: 1}
+  blueColorField: {r: 0.46666667, g: 0.827451, b: 0.94509804, a: 1}
+  yellowColorField: {r: 0.93333334, g: 0.94509804, b: 0.15686275, a: 1}
+--- !u!4 &1134058049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134058047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178503044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,12 +1351,12 @@ GameObject:
   - component: {fileID: 1178503046}
   - component: {fileID: 1178503045}
   m_Layer: 0
-  m_Name: crudefield
+  m_Name: crudePlain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1178503045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1365,11 +1413,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178503044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037000097, y: -0.0069998875, z: 247.11436}
-  m_LocalScale: {x: 1.0866132, y: 1.0843999, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 13, y: 13, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187683339
 GameObject:
@@ -1382,12 +1430,12 @@ GameObject:
   - component: {fileID: 1187683340}
   - component: {fileID: 1187683341}
   m_Layer: 0
-  m_Name: crudefarm (3)
+  m_Name: crudeRedCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1187683340
 Transform:
   m_ObjectHideFlags: 0
@@ -1396,11 +1444,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187683339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 4.9900002, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 4, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1187683341
 SpriteRenderer:
@@ -1461,12 +1509,12 @@ GameObject:
   - component: {fileID: 1367291493}
   - component: {fileID: 1367291492}
   m_Layer: 0
-  m_Name: greencrudefarmhouse
+  m_Name: crudePurpleFarmhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1367291492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1522,12 +1570,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367291491}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1970148880}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375532301
 GameObject:
@@ -1624,9 +1672,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5f72bc1d6c0e041a71641b750b32d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberRows: 14
-  numberCols: 14
+  rows: 13
+  columns: 13
+  farmhouseOffsetX: 1
+  farmhouseOffsetY: 1
   showGrid: 1
+  plainTile: {fileID: 9041543898894926905, guid: 29d108fc0a2a147b7aefaa37e3ba7985,
+    type: 3}
 --- !u!4 &1428966900
 Transform:
   m_ObjectHideFlags: 0
@@ -1635,7 +1687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428966898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: -6.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1652,12 +1704,12 @@ GameObject:
   - component: {fileID: 1619593687}
   - component: {fileID: 1619593686}
   m_Layer: 0
-  m_Name: crudefarm
+  m_Name: crudeYellowCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1619593686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1714,11 +1766,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619593685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.01, y: -4.0034986, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 5, y: -4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625487335
 GameObject:
@@ -1731,12 +1783,12 @@ GameObject:
   - component: {fileID: 1625487337}
   - component: {fileID: 1625487336}
   m_Layer: 0
-  m_Name: yellowcrudefarmhousr
+  m_Name: crudeYellowFarmhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1625487336
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1792,12 +1844,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625487335}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1970148880}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716736168
 GameObject:
@@ -1810,12 +1862,12 @@ GameObject:
   - component: {fileID: 1716736169}
   - component: {fileID: 1716736170}
   m_Layer: 0
-  m_Name: crudefarm (2)
+  m_Name: crudeYellowCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1716736169
 Transform:
   m_ObjectHideFlags: 0
@@ -1824,11 +1876,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716736168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.02, y: -5, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 4, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1716736170
 SpriteRenderer:
@@ -1919,12 +1971,12 @@ GameObject:
   - component: {fileID: 1966400588}
   - component: {fileID: 1966400589}
   m_Layer: 0
-  m_Name: crudebluefarm
+  m_Name: crudeBlueCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1966400588
 Transform:
   m_ObjectHideFlags: 0
@@ -1933,11 +1985,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966400587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.98, y: -4.01, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: -5, y: -4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1966400589
 SpriteRenderer:
@@ -1998,7 +2050,7 @@ GameObject:
   - component: {fileID: 1970148880}
   - component: {fileID: 1970148881}
   m_Layer: 0
-  m_Name: crudebackground
+  m_Name: crudeBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,18 +2064,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970148879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -0.03, z: -247.1144}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 353150927}
   - {fileID: 1178503046}
+  - {fileID: 1367291493}
   - {fileID: 358649241}
-  - {fileID: 2087252574}
-  - {fileID: 1619593687}
-  - {fileID: 1966400588}
-  - {fileID: 1716736169}
-  - {fileID: 1187683340}
   - {fileID: 603872012}
+  - {fileID: 873025168}
+  - {fileID: 353150927}
+  - {fileID: 1187683340}
+  - {fileID: 1239538}
+  - {fileID: 2087252574}
+  - {fileID: 1966400588}
+  - {fileID: 1625487337}
+  - {fileID: 1619593687}
+  - {fileID: 1716736169}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2059,12 +2115,12 @@ GameObject:
   - component: {fileID: 2087252574}
   - component: {fileID: 2087252573}
   m_Layer: 0
-  m_Name: crudebluefarm
+  m_Name: crudeBlueCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2087252573
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2121,11 +2177,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087252572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.02, y: -5, z: 247.11436}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: -4, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970148880}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2106499473
 GameObject:
