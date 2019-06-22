@@ -383,6 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 341441880}
   - component: {fileID: 341441879}
+  - component: {fileID: 341441881}
   m_Layer: 0
   m_Name: RaindropManager
   m_TagString: Untagged
@@ -397,7 +398,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341441878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2af05d11e7f60c1479f7118fafc1d908, type: 3}
   m_Name: 
@@ -421,6 +422,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341441881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341441878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b523811035a308479ab29eb6d876a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {x: 0, y: 0}
+  size: {x: 12, y: 12}
+  time: 0
+  timer: 0
+  timeUntilDropsDestroyed: 5
+  numOfDropsToSpawn: 20
+  SideLengthOfField: 12
+  maxSpeed: 0
 --- !u!1 &352026378
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1013,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &587163159
 SpriteRenderer:
   m_ObjectHideFlags: 0
