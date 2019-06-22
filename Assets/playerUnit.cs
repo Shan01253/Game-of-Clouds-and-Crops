@@ -7,6 +7,7 @@ public class playerUnit : NetworkBehaviour
 {
     Vector2 prev = Vector2.zero;
     Vector2 velocity;
+    public float speed = 5;
 
     //position which we think is most correct for this player
     //If we are the authority then this will be exactly the same as transform.position
@@ -69,7 +70,7 @@ public class playerUnit : NetworkBehaviour
         //{
         //    Destroy(gameObject);
         //}
-
+        velocity = speed * velocity.normalized;
 
         if (prev != velocity)
         {
