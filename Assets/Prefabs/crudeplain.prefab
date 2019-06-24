@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8746875079624748499}
   - component: {fileID: 8111259421838666731}
   - component: {fileID: 8679339317400099989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crudeplain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class TileContainer : MonoBehaviour
 {
     private Tile tile;
@@ -18,23 +19,21 @@ public class TileContainer : MonoBehaviour
         tile.AddNeighbor(this);
     }
 
-
-    TileContainer()
-    {
-        tile = new PlainTile();
-    }
-
     void Awake()
     {
+        tile = new PlainTile();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Used for grid initialization and for spreading crops during the game
     public void ConvertToCrop(int playerID)
     {
-        spriteRenderer.color = PlayerColorManager.GetRGBAColor(playerID);
-        spriteRenderer.sprite = Resources.Load<Sprite>("crudecrop");
-        tile = new CropTile();
+        if (tile.CanConvertToCrop(playerID))
+        {
+            spriteRenderer.color = PlayerColorManager.GetRGBAColor(playerID);
+            spriteRenderer.sprite = Resources.Load<Sprite>("crudecrop");
+            tile = new CropTile(playerID);
+        }
     }
 
     // Used only for grid initialization
@@ -58,6 +57,18 @@ public class TileContainer : MonoBehaviour
             default:
                 return;
         }
-        tile = new FarmhouseTile();
+        tile = new FarmhouseTile(playerID);
+    }
+
+    public void Water(float waterAmount)
+    {
+        if (tile.Water(waterAmount))
+        {
+            int playerID = tile.PlayerID;
+            foreach (TileContainer t in neighbors)
+            {
+                t.ConvertToCrop(playerID);
+            }
+        }
     }
 }

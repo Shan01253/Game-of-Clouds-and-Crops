@@ -41,6 +41,8 @@ public class GridManager : MonoBehaviour
                 GameObject tileObj = Instantiate(plainTile, bottomLeft + new Vector3(jj, ii), Quaternion.identity, transform);
                 TileContainer tile = tileObj.GetComponent<TileContainer>();
                 grid[ii][jj] = tile;
+
+                // Add tile above and tile to the left to this tile's neighbors, and add this tile to their neighbors
                 if (ii > 0)
                     tile.AddNeighbor(grid[ii - 1][jj]);
                 if (jj > 0)
@@ -48,7 +50,7 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        // Place initial farmhouses and crop tiles
+        // Place initial farmhouses and crop tiles based on serialized offset values
         grid[farmhouseOffsetY][farmhouseOffsetX].ConvertToFarmhouse(0);
         grid[farmhouseOffsetY + 1][farmhouseOffsetX].ConvertToCrop(0);
         grid[farmhouseOffsetY][farmhouseOffsetX + 1].ConvertToCrop(0);
@@ -68,6 +70,7 @@ public class GridManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        // Show grid lines in editor
         if (showGrid)
         {
             Gizmos.color = Color.magenta;

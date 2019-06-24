@@ -36,6 +36,7 @@ public class PlayerColorManager : MonoBehaviour
 
         IDToColorMap = new Dictionary<int, PlayerColor>(4);
 
+        // Temporary solution for testing; players will have their colors assigned dynamically when multiplayer is implemented
         if (autoAssignColorsToPlayers)
         {
             AssignColorToPlayer(0, PlayerColor.PURPLE);
