@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
+    public GameObject[] CloudsToHighlightTilesUnder;
+    public bool HighlightTilesUnderCloudsAndNear = false;
+
+
     // Parameters that determine number of rows/columns
     [SerializeField]
     private int rows;
@@ -85,6 +89,40 @@ public class GridManager : MonoBehaviour
             for (int i = 0; i <= columns; i++)
             {
                 Gizmos.DrawLine(bottomLeft + new Vector3(i, 0, 0), bottomLeft + new Vector3(i, rows, 0));
+            }
+        }
+
+        if (HighlightTilesUnderCloudsAndNear)
+        {
+            foreach(GameObject g in CloudsToHighlightTilesUnder)
+            {
+                Color c = (Color.white + Color.black + Color.blue)/3;
+                c.a = 0.5f;
+                Gizmos.color = c;
+                
+                Vector3Int tilePos = Vector3Int.RoundToInt(g.transform.position);
+                Gizmos.DrawCube(tilePos, Vector3.one);
+
+                
+                Vector3 temp = Vector3.right;
+
+                // draws cubes around the tilepos
+                c = (Color.white + Color.blue) / 2;
+                c.a = 0.5f;
+                Gizmos.color = c;
+                for (int i = 0; i < 8; i++)
+                {
+
+                    Gizmos.DrawCube(tilePos + temp, Vector3.one);
+
+                    temp = new Vector3((temp.x - temp.y), (temp.x + temp.y), 0);
+
+                    if (temp.x != 0)
+                        temp.x = temp.x / Mathf.Abs(temp.x);
+                    if (temp.y != 0)
+                        temp.y = temp.y / Mathf.Abs(temp.y);
+                }
+
             }
         }
     }
