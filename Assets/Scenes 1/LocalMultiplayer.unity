@@ -444,11 +444,11 @@ MonoBehaviour:
   size4: {x: 6, y: 6}
   time: 0
   timer: 0
-  timeUntilDropsDestroyed: 2
-  numOfDropsToSpawn: 2
-  SideLengthOfField: 12
-  maxSpeed: 0
-  delay: 0
+  timeUntilDropsSpawn: 2
+  timeUntilDropsDestroyed: 5
+  maxNumOfDropsToSpawn: 2
+  maxDelay: 4
+  minDelay: 1
 --- !u!1 &352026378
 GameObject:
   m_ObjectHideFlags: 0
