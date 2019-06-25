@@ -1058,6 +1058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5f72bc1d6c0e041a71641b750b32d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CloudsToHighlightTilesUnder:
+  - {fileID: 566634140}
+  HighlightTilesUnderCloudsAndNear: 1
   rows: 13
   columns: 13
   farmhouseOffsetX: 1
