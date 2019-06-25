@@ -11,12 +11,12 @@ public class emptyOnSquirt : MonoBehaviour
     void Start()
     {
         img = GetComponent<Image>();
-        PlayerActions.subscribe_Spritz(empty);
+        PlayerPrecipitation.subscribe(empty);
     }
 
-    void empty(int totalNumberEmpties)
+    void empty(float totalNumberEmpties)
     {
-        img.fillAmount -= 1.0f / 3;
+        img.fillAmount -= 1.0f / totalNumberEmpties;
     }
 
 

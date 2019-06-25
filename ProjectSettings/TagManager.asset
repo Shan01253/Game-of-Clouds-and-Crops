@@ -45,6 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Raindrops
+    uniqueID: 1303807375
+    locked: 0
+  - name: Player
+    uniqueID: 4213682513
+    locked: 0
   - name: front
     uniqueID: 2116235187
     locked: 0
