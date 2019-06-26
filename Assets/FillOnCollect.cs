@@ -14,8 +14,8 @@ public class FillOnCollect : MonoBehaviour
         CollectRaindrops.Subscribe(Fill);
     }
 
-    void Fill(int totalNumberDrops)
+    void Fill(float percentFill)
     {
-        img.fillAmount += 1.0f/totalNumberDrops;
+        img.fillAmount += percentFill;
     }
 }
