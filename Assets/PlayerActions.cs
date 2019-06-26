@@ -13,13 +13,13 @@ public class PlayerActions : MonoBehaviour
     private SpriteRenderer sr;       // wanna sprite cranberry
     public bool displayAnim;
 
-    private static event Action<int> onSpritzListeners;
+    private event Action<int> onSpritzListeners;
 
-    public static void subscribe_Spritz(Action<int> func)
+    public void subscribe_Spritz(Action<int> func)
     {
         onSpritzListeners += func;
     }
-    public static void unsubscribe_Spritz(Action<int> func)
+    public void unsubscribe_Spritz(Action<int> func)
     {
         onSpritzListeners += func;
     }

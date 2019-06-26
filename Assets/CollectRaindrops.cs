@@ -6,14 +6,14 @@ using System;
 public class CollectRaindrops : MonoBehaviour
 {
     public int withDropCapacity = 21;
-    private static event Action<int> Listeners;
+    private event Action<int> Listeners;
  
-    public static void Subscribe(Action<int> listener)
+    public void Subscribe(Action<int> listener)
     {
         Listeners += listener;
     }
 
-    public static void Unsubscribe(Action<int> listener)
+    public void Unsubscribe(Action<int> listener)
     {
         Listeners -= listener;
     }

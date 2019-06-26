@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class emptyOnSquirt : MonoBehaviour
 {
     Image img;
+    public PlayerActions actions;
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
-        PlayerActions.subscribe_Spritz(empty);
+        actions.subscribe_Spritz(empty);
     }
 
     void empty(int totalNumberEmpties)
