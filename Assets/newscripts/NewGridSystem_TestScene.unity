@@ -304,7 +304,6 @@ GameObject:
   m_Component:
   - component: {fileID: 341441880}
   - component: {fileID: 341441879}
-  - component: {fileID: 341441881}
   m_Layer: 0
   m_Name: RaindropManager
   m_TagString: Untagged
@@ -319,7 +318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341441878}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2af05d11e7f60c1479f7118fafc1d908, type: 3}
   m_Name: 
@@ -343,33 +342,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &341441881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341441878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b523811035a308479ab29eb6d876a36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  center1: {x: -3.1, y: 3.1}
-  center2: {x: 3, y: 3.1}
-  center3: {x: -3.1, y: -3.1}
-  center4: {x: 3.1, y: -3.1}
-  size1: {x: 6, y: 6}
-  size2: {x: 6, y: 6}
-  size3: {x: 6, y: 6}
-  size4: {x: 6, y: 6}
-  time: 0
-  timer: 0
-  timeUntilDropsSpawn: 2
-  timeUntilDropsDestroyed: 5
-  maxNumOfDropsToSpawn: 2
-  maxDelay: 4
-  minDelay: 1
 --- !u!1 &352026378
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +355,6 @@ GameObject:
   - component: {fileID: 352026381}
   - component: {fileID: 352026383}
   - component: {fileID: 352026380}
-  - component: {fileID: 352026384}
   m_Layer: 5
   m_Name: fullCloudCharacter_Filler
   m_TagString: Untagged
@@ -422,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba290280035a0d44ea3aa36b82496b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PC: {fileID: 566634146}
 --- !u!114 &352026381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,18 +444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 566634140}
---- !u!114 &352026384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352026378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a530c776ad1ca6f4e96e2a409bc88e2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &423191900
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +476,7 @@ MonoBehaviour:
   pools:
   - tag: raindrop
     prefab: {fileID: 587163156}
-    size: 40
+    size: 20
 --- !u!4 &423191902
 Transform:
   m_ObjectHideFlags: 0
@@ -545,9 +505,8 @@ GameObject:
   - component: {fileID: 566634145}
   - component: {fileID: 566634148}
   - component: {fileID: 566634147}
-  - component: {fileID: 566634146}
   - component: {fileID: 566634144}
-  - component: {fileID: 566634149}
+  - component: {fileID: 566634146}
   m_Layer: 0
   m_Name: crudeCloudPlayer
   m_TagString: Player
@@ -689,11 +648,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 566634140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08532755f7c864f498e6d4d5f4a034cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3347ab1ccd30f1044a8caf5b46fb202c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentFillPerDrop: 0.2
-  percentFilledWithWater: 0
+  percentPerCondensate: 0.2
+  percentPerPrecipitate: 0.3
+  amountPerClick: 5
+  innerRadius: 1
+  outerRadius: 2
 --- !u!114 &566634147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,22 +682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &566634149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566634140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce9472106ddb41d088987f8b1fb06ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  percentPerRain: 0.3
-  amountPerClick: 5
-  innerRadius: 1
-  outerRadius: 2
 --- !u!1 &587163156
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +747,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!212 &587163159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -969,14 +915,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1134058047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee772df5b57a422ba63d51b7c3a1222, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d5b549dd221c4248943dc021ca2efa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   autoAssignColorsToPlayers: 1
-  purpleColorField: {r: 0.73333335, g: 0.36078432, b: 0.972549, a: 1}
-  redColorField: {r: 1, g: 0.68235296, b: 0.68235296, a: 1}
-  blueColorField: {r: 0.46666667, g: 0.827451, b: 0.94509804, a: 1}
-  yellowColorField: {r: 0.93333334, g: 0.94509804, b: 0.15686275, a: 1}
+  purpleColorField: {r: 0.41323838, g: 0.15686187, b: 0.7075472, a: 1}
+  redColorField: {r: 0.7169812, g: 0.18600929, b: 0.18600929, a: 1}
+  blueColorField: {r: 0.2242791, g: 0.57578534, b: 0.754717, a: 1}
+  yellowColorField: {r: 0.80755657, g: 0.8490566, b: 0.12415449, a: 1}
 --- !u!4 &1134058049
 Transform:
   m_ObjectHideFlags: 0
@@ -989,7 +935,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375532301
 GameObject:
@@ -1083,7 +1029,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1428966898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5f72bc1d6c0e041a71641b750b32d5, type: 3}
+  m_Script: {fileID: 11500000, guid: a2cec151c1cde6d4bb492073c954c4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CloudsToHighlightTilesUnder:
@@ -1105,36 +1051,6 @@ Transform:
   m_GameObject: {fileID: 1428966898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1823985478
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1823985481}
-  m_Layer: 0
-  m_Name: NetworkManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1823985481
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823985478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1145115, y: 0.41758773, z: -253.79004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

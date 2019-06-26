@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - drop
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Tile
   - 
   - 
   - 
@@ -44,6 +45,12 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Raindrops
+    uniqueID: 1303807375
+    locked: 0
+  - name: Player
+    uniqueID: 4213682513
     locked: 0
   - name: front
     uniqueID: 2116235187
