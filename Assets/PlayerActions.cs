@@ -13,22 +13,7 @@ public class PlayerActions : MonoBehaviour
     private SpriteRenderer sr;       // wanna sprite cranberry
     public bool displayAnim;
 
-<<<<<<< HEAD
-    private event Action<int> onSpritzListeners;
 
-    public void subscribe_Spritz(Action<int> func)
-    {
-        onSpritzListeners += func;
-    }
-    public void unsubscribe_Spritz(Action<int> func)
-    {
-        onSpritzListeners += func;
-    }
-=======
-
-
-
->>>>>>> bd1864fff4fa447fd31c3cb9254e9c31304da467
 
     // Start is called before the first frame update
     void Start()
