@@ -8,7 +8,10 @@ public class Precipitation_Condensation : MonoBehaviour
 
     private float percentFull = 0;
 
-    public float percentPerRain = .3f;
+    public float percentPerCondensate = .2f;
+    public float percentPerPrecipitate = .3f;
+
+
     [SerializeField]
     private float amountPerClick = 5f;
     [SerializeField]
@@ -40,10 +43,11 @@ public class Precipitation_Condensation : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") && percentFull > percentPerRain)
+        if (Input.GetButtonDown("Fire1") && percentFull > percentPerPrecipitate)
         {
-            Precipitation_Listeners?.Invoke(3);
             int layerMask = 1 << LayerMask.NameToLayer("Tile");
+
+            percentFull -= percentPerPrecipitate;
 
             // Water tiles within inner radius
             Collider2D[] tiles = Physics2D.OverlapCircleAll(transform.position, innerRadius, layerMask);
@@ -52,16 +56,52 @@ public class Precipitation_Condensation : MonoBehaviour
                 Debug.Log("WATERED " + amountPerClick);
                 coll.GetComponent<TileContainer>().Water(amountPerClick);
             }
-            StartCoroutine(rainVisualize());
-            Precipitation_Listeners?.Invoke(percentPerRain);
             // Water tiles within outer radius
             tiles = Physics2D.OverlapCircleAll(transform.position, outerRadius, layerMask);
             foreach (Collider2D coll in tiles)
             {
                 coll.GetComponent<TileContainer>().Water(amountPerClick);
             }
+
+
+            StartCoroutine(rainVisualize());
+            Precipitation_Listeners?.Invoke(percentPerPrecipitate);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("drop"))
+        {
+            collision.gameObject.SetActive(false);
+            Condensation_Listeners?.Invoke(percentPerCondensate);
+
+            if (percentFull < 1)
+            {
+                percentFull += percentPerCondensate;
+            }
+            else
+            {
+                percentFull = 1;
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     IEnumerator rainVisualize()
     {
         raining = true;
