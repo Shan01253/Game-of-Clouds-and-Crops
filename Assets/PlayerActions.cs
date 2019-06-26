@@ -13,16 +13,9 @@ public class PlayerActions : MonoBehaviour
     private SpriteRenderer sr;       // wanna sprite cranberry
     public bool displayAnim;
 
-    private static event Action<int> onSpritzListeners;
 
-    public static void subscribe_Spritz(Action<int> func)
-    {
-        onSpritzListeners += func;
-    }
-    public static void unsubscribe_Spritz(Action<int> func)
-    {
-        onSpritzListeners += func;
-    }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,18 +27,18 @@ public class PlayerActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetButtonUp("Fire1")) {
-           Debug.Log("testing");
-           StartCoroutine(panicTemp());
-            onSpritzListeners?.Invoke(3);
-       }
+       //if (Input.GetButtonUp("Fire1")) {
+       //    Debug.Log("testing");
+       //    StartCoroutine(panicTemp());
+
+       //}
     }
 
-    IEnumerator panicTemp() {
-        sr.sprite = panicSprite;
-        sr.sortingLayerName = "front";
-        yield return new WaitForSeconds(waitTime);
-        sr.sortingLayerName = "Default";
-        sr.sprite = normalSprite;
-    }
+    //IEnumerator panicTemp() {
+    //    sr.sprite = panicSprite;
+    //    sr.sortingLayerName = "front";
+    //    yield return new WaitForSeconds(waitTime);
+    //    sr.sortingLayerName = "Default";
+    //    sr.sprite = normalSprite;
+    //}
 }
