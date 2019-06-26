@@ -666,6 +666,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   withDropCapacity: 21
 --- !u!114 &566634147
 MonoBehaviour:
@@ -705,6 +707,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce9472106ddb41d088987f8b1fb06ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percentPerRain: 0.3
+  amountPerClick: 5
+  innerRadius: 1
+  outerRadius: 2
 --- !u!1 &587163156
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +812,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1303807375
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f71265fcc33c44e49b2877147d768886, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -941,6 +947,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee772df5b57a422ba63d51b7c3a1222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoAssignColorsToPlayers: 0
+  purpleColorField: {r: 0, g: 0, b: 0, a: 0}
+  redColorField: {r: 0, g: 0, b: 0, a: 0}
+  blueColorField: {r: 0, g: 0, b: 0, a: 0}
+  yellowColorField: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1134058049
 Transform:
   m_ObjectHideFlags: 0
@@ -1048,6 +1059,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2cec151c1cde6d4bb492073c954c4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
   CloudsToHighlightTilesUnder: []
