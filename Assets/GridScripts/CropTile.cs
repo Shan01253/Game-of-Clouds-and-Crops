@@ -7,7 +7,9 @@ public class CropTile : Tile
     // How much water the crop tile currently has
     private float currentWater = 0f;
     // How much water the crop tile needs to be fully watered
-    private static readonly float waterThreshold = 30f;
+    
+    // this feels arbitrary so I have changed it to be percents so that in watering code I can fill be a certain percent -Yahiya
+    private static readonly float waterThreshold = 1;
 
     // Crop tiles can be owned by players, so take in a player ID on construction
     public CropTile(int playerID) : base(playerID) { }
@@ -17,11 +19,23 @@ public class CropTile : Tile
     // return true so the TileContainer can convert adjacent tiles
     public override bool Water(float waterAmount)
     {
+        // put these to not catch you by surprise -Yahiya
+        if (waterAmount < 0)
+        {
+            throw new System.ArgumentException("Cannot water negative amount!");
+        }
+        if (waterAmount > 1)
+        {
+            Debug.Log(waterAmount);
+            throw new System.ArgumentException("Cannot water more than 200 percent at a time");
+        }
+
         currentWater += waterAmount;
         bool fullyWatered = currentWater >= waterThreshold;
 
         if (fullyWatered)
         {
+            //Debug.Log("received full amount of water");
             currentWater = 0f;
         }
 

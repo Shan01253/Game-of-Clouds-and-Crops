@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes 1/PreScene.unity
     guid: cc504ddfdd5b1e94f9c1a3364029eb93
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes 1/MainMenu.unity
     guid: 859c5168c6eb94440848ffd0e6281e0f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes 1/LocalMultiplayer.unity
     guid: 2ee598658d4ea21478cb2ed287509afe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes 1/OnlineMultiplayer.unity
     guid: 3141f653cf0a92c43a09f88a8d244b65
+  - enabled: 1
+    path: Assets/YahiyaPlayground_DontTouch/TestingRefactoring.unity
+    guid: 5516314532101924f9085272b9b696da
   m_configObjects: {}

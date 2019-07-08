@@ -131,4 +131,14 @@ public class GridManager : MonoBehaviour
     {
         return transform.position - new Vector3((float)columns / 2, (float)rows / 2);
     }
+
+    public TileContainer GetTile(Vector3Int originCenteredPos)
+    {
+        Vector3Int v = Vector3Int.FloorToInt(originCenteredPos - GetBottomLeftOfGrid());
+        Debug.Log(v);
+        Debug.Log(originCenteredPos - GetBottomLeftOfGrid());
+        // grid appears to have x and y coord switched
+        return grid[v.y][v.x];
+
+    }
 }
