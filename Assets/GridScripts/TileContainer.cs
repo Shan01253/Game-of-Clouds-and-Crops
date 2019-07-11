@@ -71,4 +71,11 @@ public class TileContainer : MonoBehaviour
             }
         }
     }
+
+    // Returns the player ID of the player that owns this tile
+    // If the tile is not owned by a player, returns -1
+    public int GetOwnerID()
+    {
+        return tile.PlayerID;
+    }
 }

@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private float gameDuration = 30f;
-
-    private GridManager grid;
-
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        grid = FindObjectOfType<GridManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 }

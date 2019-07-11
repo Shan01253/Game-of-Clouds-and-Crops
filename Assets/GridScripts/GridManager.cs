@@ -141,4 +141,51 @@ public class GridManager : MonoBehaviour
         return grid[v.y][v.x];
 
     }
+
+    class PlayerScore
+    {
+        public PlayerScore(int id, int s)
+        {
+            playerID = id;
+            score = s;
+        }
+
+        public int playerID;
+        public int score;
+    }
+
+    // Returns an ordered list of player IDs from first to last place
+    public List<int> GetWinnerOrder()
+    {
+        List<PlayerScore> tileCounts = new List<PlayerScore>(4);
+        for (int ii = 0; ii < 4; ii++)
+        {
+            tileCounts.Add(new PlayerScore(ii, 0));
+        }
+
+        for (int ii = 0; ii < rows; ii++)
+        {
+            for (int jj = 0; jj < columns; jj++)
+            {
+                int playerID = grid[ii][jj].GetOwnerID();
+                if (playerID >= 0)
+                {
+                    tileCounts[playerID].score++;
+                }
+            }
+        }
+
+        tileCounts.Sort(delegate(PlayerScore p1, PlayerScore p2) {
+            return p1.score.CompareTo(p2.score);
+        });
+        tileCounts.Reverse();
+
+        List<int> results = new List<int>(4);
+        foreach (PlayerScore player in tileCounts)
+        {
+            results.Add(player.playerID);
+        }
+
+        return results;
+    }
 }

@@ -16,7 +16,7 @@ public class Precipitation_Condensation : MonoBehaviour
     [Range(0, 1)]
     private float percent_DepleteMeter_PerPrecipitate = .3f;
 
-    public GridManager GM;
+    private GridManager GM;
 
     [SerializeField]
     [Range(0, 1)]
@@ -46,6 +46,12 @@ public class Precipitation_Condensation : MonoBehaviour
     {
         Condensation_Listeners -= func;
     }
+
+    private void Awake()
+    {
+        GM = FindObjectOfType<GridManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
