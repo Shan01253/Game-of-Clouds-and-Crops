@@ -248,7 +248,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.8254717, g: 0.99643594, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -264,7 +264,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196707896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -531,11 +531,11 @@ GameObject:
   - component: {fileID: 566634142}
   - component: {fileID: 566634141}
   - component: {fileID: 566634143}
-  - component: {fileID: 566634145}
   - component: {fileID: 566634148}
   - component: {fileID: 566634147}
   - component: {fileID: 566634144}
   - component: {fileID: 566634146}
+  - component: {fileID: 566634145}
   m_Layer: 0
   m_Name: crudeCloudPlayer
   m_TagString: Player
@@ -642,8 +642,8 @@ MonoBehaviour:
   panicSprite: {fileID: 21300000, guid: 9fb786b2079aa17c19352d4356309293, type: 3}
   waitTime: 0.5
   displayAnim: 0
---- !u!61 &566634145
-BoxCollider2D:
+--- !u!58 &566634145
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -656,18 +656,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &566634146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &587163157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,7 +822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587163156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.68094194, y: 7.530922, z: 0.04694874}
+  m_LocalPosition: {x: 8.07, y: 5.24, z: 0.04694874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417287879}
@@ -1115,11 +1105,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 6.5462513, y: -6.469808}
-  - {x: -6.4549775, y: -6.456905}
-  - {x: -6.469873, y: 6.52273}
-  - {x: 6.557184, y: 6.532291}
-  - {x: 6.533787, y: -6.4730396}
+  - {x: 6.5, y: -6}
+  - {x: -6.5, y: -6}
+  - {x: -6.5, y: 7}
+  - {x: 6.5, y: 7}
+  - {x: 6.5, y: -6}
 --- !u!1 &2106499473
 GameObject:
   m_ObjectHideFlags: 0
